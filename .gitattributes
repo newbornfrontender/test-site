@@ -1,1 +1,8 @@
-* -crlf
+* text=auto
+
+*.txt text
+
+*.jpg binary
+*.svg binary
+*.png binary
+*.ico binary
