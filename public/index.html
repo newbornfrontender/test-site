@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <base href="/">
-</head>
-<body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-  </nav>
 
-  <main id="outlet"></main>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Home</title>
+    <base href="/" />
+    <script
+      type="module"
+      src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js?module"
+    ></script>
+    <script type="module">
+      'use strict';
 
-  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBTsjPuGZwZ9Q92z3lNFweILlG0vXpwK2w",
-      authDomain: "nf-testsite.firebaseapp.com",
-      databaseURL: "https://nf-testsite.firebaseio.com",
-      projectId: "nf-testsite",
-      storageBucket: "",
-      messagingSenderId: "650238889862"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script type="module" src="/app.js"></script>
-</body>
+      WebComponents.waitFor(() => {
+        return import('/my-app.js');
+      });
+    </script>
+  </head>
+
+  <body>
+    <my-app></my-app>
+
+    <noscript> Please enable JavaScript to view this website. </noscript>
+  </body>
 </html>
