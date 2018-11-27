@@ -21,7 +21,7 @@ class NotFoundView extends HTMLElement {
 customElements.define('not-found-view', NotFoundView);
 
 router.setRoutes([
-  {path: '', component: 'home-view'},
+  {path: '/', component: 'home-view'},
 ]);
 
 router.setRoutes([
